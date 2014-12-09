@@ -1,7 +1,15 @@
 LOCAL_PATH := jcrom/moto/shamu
 
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.voice.capable=false
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=false
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.voice.capable=true
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ui.phone=560 \
+    persist.sys.ui.tablet=384 \
+    persist.sys.ui.phablet=480
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ui.select=0
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/bin/mdm_helper_proxy:system/bin/mdm_helper_proxy:moto \
